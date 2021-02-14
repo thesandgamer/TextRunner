@@ -51,6 +51,7 @@ public class Scr_PlayerDeath : MonoBehaviour
         if (!dead)
         {
             Instantiate(deathFx, transform.position, Quaternion.identity);
+            FindObjectOfType<GameManager>().GetComponent<Scr_AudioPlayer>().PlayDeathSound();
             Invoke("ShowLooseMenu", 2);
             Ui.SetActive(false);
             dead = true;

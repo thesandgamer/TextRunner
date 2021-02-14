@@ -43,6 +43,7 @@ public class Scr_Player_EffectGiver : MonoBehaviour
         if (hitInfo.collider.gameObject.CompareTag("Platforme"))
         {
             hitInfo.collider.gameObject.GetComponent<Scr_TextEffect>().ActiveEffect(effet);
+            FindObjectOfType<GameManager>().GetComponent<Scr_AudioPlayer>().PlayLanchTextSound();
         }
     }
 

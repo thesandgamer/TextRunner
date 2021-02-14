@@ -11,6 +11,7 @@ public class Scr_End : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             WinPannel.SetActive(true);
+            FindObjectOfType<GameManager>().GetComponent<Scr_AudioPlayer>().PlayWinSound();
             other.gameObject.SetActive(false);
         }
     }
